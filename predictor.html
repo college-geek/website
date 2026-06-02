@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Predictor • College Geek</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="site.css" />
+  </head>
+
+  <body>
+    <div id="nav"></div>
+
+    <section class="page-hero">
+      <h1>College Predictor</h1>
+      <p>Enter your rank and category to find possible college + branch options based on previous cutoffs.</p>
+      <div class="hero-actions">
+        <a class="btn-outline" href="colleges.html" style="text-decoration:none">🏛️ Explore Colleges</a>
+        <a class="btn-outline" href="index.html" style="text-decoration:none">← Back to Home</a>
+      </div>
+    </section>
+
+    <section class="container" style="padding: 18px 5% 70px">
+      <div class="predictor-card">
+        <div class="predictor-grid">
+          <div class="field">
+            <label>Mode</label>
+            <div class="seg">
+              <button id="pm-ugeac" class="active" type="button">UGEAC</button>
+              <button id="pm-jee" type="button">JEE AIR</button>
+            </div>
+          </div>
+          <div class="field">
+            <label>Your Rank</label>
+            <input id="rank" class="input" placeholder="e.g. UR-4500 or 4500" />
+          </div>
+          <div class="field">
+            <label>Branch</label>
+            <select id="pbranch" class="select"></select>
+          </div>
+        </div>
+
+        <div class="predictor-actions">
+          <button id="go" class="btn-primary" type="button">🔮 Predict Colleges</button>
+          <div style="color:var(--text-secondary);font-size:0.85rem;line-height:1.6">
+            Tip: for UGEAC you can type <b>UR-5000</b> or just <b>5000</b>.
+          </div>
+        </div>
+      </div>
+
+      <div id="summary" style="margin-top: 18px"></div>
+      <div class="result-grid" id="results"></div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="./data.js"></script>
+    <script src="./data-extra.js"></script>
+    <script src="./shared.js"></script>
+    <script src="./predictor.js"></script>
+  </body>
+</html>

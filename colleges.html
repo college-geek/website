@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colleges • College Geek</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="site.css" />
+  </head>
+
+  <body>
+    <div id="nav"></div>
+
+    <section class="page-hero">
+      <h1>College Explorer</h1>
+      <p>
+        Browse Bihar engineering colleges, filter by branch/tier, and open a college to see cutoffs, fees, hostel, and
+        contact info.
+      </p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="predictor.html" style="text-decoration:none">🔮 Go to Predictor</a>
+        <a class="btn-outline" href="index.html" style="text-decoration:none">← Back to Home</a>
+      </div>
+    </section>
+
+    <section class="container" style="padding-bottom: 70px">
+      <div class="filters">
+        <div class="filters-grid">
+          <div class="field">
+            <label>Search</label>
+            <input id="q" class="input" placeholder="Search colleges..." />
+          </div>
+        </div>
+
+        <div class="subbar">
+          <div class="seg" role="tablist" aria-label="Cutoff mode">
+            <button id="mode-ugeac" class="active" type="button">UGEAC</button>
+            <button id="mode-jee" type="button">JEE AIR</button>
+          </div>
+          <div class="count-pill" id="count"></div>
+        </div>
+      </div>
+
+      <div class="colleges-grid cg-list" id="grid"></div>
+    </section>
+
+    <!-- Detail modal -->
+    <div class="modal" id="modal" aria-hidden="true">
+      <div class="modal-card" role="dialog" aria-modal="true" aria-label="College details">
+        <div class="modal-hero">
+          <div class="hero-photo" id="m-photo"><span>🏫</span></div>
+          <div class="hero-meta">
+            <h2 id="m-name"></h2>
+            <div class="meta-line" id="m-meta"></div>
+            <div class="meta-line" style="margin-top: 10px" id="m-pills"></div>
+          </div>
+          <button class="modal-close" id="m-close" type="button" title="Close">✕</button>
+        </div>
+        <div class="detail-tabs" id="m-tabs"></div>
+        <div class="detail-body" id="m-body"></div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="./data.js"></script>
+    <script src="./data-extra.js"></script>
+    <script src="./seats.js"></script>
+    <script src="./shared.js"></script>
+    <script src="./colleges.js"></script>
+  </body>
+</html>
