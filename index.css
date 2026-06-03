@@ -601,6 +601,7 @@ nav {
 }
 
 .btn-view {
+    display: block;
     width: 100%;
     background: var(--blue);
     color: white;
@@ -612,6 +613,8 @@ nav {
     font-size: 0.82rem;
     cursor: pointer;
     transition: background .2s;
+    text-align: center;
+    text-decoration: none;
 }
 
 .btn-view:hover {

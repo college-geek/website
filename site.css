@@ -379,6 +379,16 @@
   padding: 16px;
   overflow:auto;
 }
+
+/* Detail pages (non-modal) */
+.detail-shell{
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: white;
+  /* Unlike modal-card: no fixed max-height and no heavy shadow */
+  overflow: hidden;
+}
 .info-grid{
   display:grid;
   grid-template-columns: 1fr 1fr;

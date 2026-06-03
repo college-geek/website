@@ -32,17 +32,18 @@
 
   // Reusable navbar/footer (kept consistent with the uploaded homepage)
   function renderNav(active) {
+    const base = window.CG_BASE || "";
     const a = (id) => (active === id ? 'style="color: var(--blue)"' : "");
     return `
       <nav>
-        <a href="index.html" class="nav-logo">
+        <a href="${base}index.html" class="nav-logo">
           <div class="nav-logo-icon">🎓</div>
           College Geek
         </a>
         <ul class="nav-links">
-          <li><a href="colleges.html" ${a("colleges")}>Colleges</a></li>
-          <li><a href="predictor.html" ${a("predictor")}>Predictor</a></li>
-          <li><a href="career-roadmap.html" ${a("roadmap")}>Career Roadmap</a></li>
+          <li><a href="${base}colleges.html" ${a("colleges")}>Colleges</a></li>
+          <li><a href="${base}predictor.html" ${a("predictor")}>Predictor</a></li>
+          <li><a href="${base}career-roadmap.html" ${a("roadmap")}>Career Roadmap</a></li>
           <li><a href="#" title="Placeholder">Community</a></li>
           <li><a href="#" title="Placeholder">Resources ▾</a></li>
         </ul>
@@ -52,6 +53,7 @@
   }
 
   function renderFooter() {
+    const base = window.CG_BASE || "";
     return `
       <footer>
         <div class="footer-top">
@@ -62,8 +64,8 @@
           <div class="footer-col">
             <h4>Platform</h4>
             <ul>
-              <li><a href="predictor.html">College Predictor</a></li>
-              <li><a href="colleges.html">College Explorer</a></li>
+              <li><a href="${base}predictor.html">College Predictor</a></li>
+              <li><a href="${base}colleges.html">College Explorer</a></li>
               <li><a href="#" title="Placeholder">Branch Comparison</a></li>
               <li><a href="#" title="Placeholder">Cutoff Trends</a></li>
             </ul>
@@ -74,7 +76,7 @@
               <li><a href="#" title="Placeholder">UGEAC Guide</a></li>
               <li><a href="#" title="Placeholder">Counseling Schedule</a></li>
               <li><a href="#" title="Placeholder">Study Materials</a></li>
-              <li><a href="career-roadmap.html">Career Roadmap</a></li>
+              <li><a href="${base}career-roadmap.html">Career Roadmap</a></li>
             </ul>
           </div>
           <div class="footer-col">
